@@ -3,6 +3,11 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 import Image from 'next/image'
+import {
+  LoginLink,
+  RegisterLink,
+  getKindeServerSession,
+} from '@kinde-oss/kinde-auth-nextjs/server'
 
 export default function Home() {
   return (
@@ -24,7 +29,7 @@ export default function Home() {
           asking questions right away.
         </p>
 
-        <Link
+        <RegisterLink
           className={buttonVariants({
             size: 'lg',
             className: 'mt-5',
@@ -33,7 +38,7 @@ export default function Home() {
           target='_blank'>
           Get started{' '}
           <ArrowRight className='ml-2 h-5 w-5' />
-        </Link>
+        </RegisterLink>
       </MaxWidthWrapper>
 
       {/* value proposition section */}
