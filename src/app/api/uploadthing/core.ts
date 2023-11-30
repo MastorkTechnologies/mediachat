@@ -78,19 +78,19 @@ const onUploadComplete = async ({
       PLANS.find((plan) => plan.name === 'Free')!
         .pagesPerPdf
 
-    if (
-      (isSubscribed && isProExceeded) ||
-      (!isSubscribed && isFreeExceeded)
-    ) {
-      await db.file.update({
-        data: {
-          uploadStatus: 'FAILED',
-        },
-        where: {
-          id: createdFile.id,
-        },
-      })
-    }
+    // if (
+    //   (isSubscribed && isProExceeded) ||
+    //   (!isSubscribed && isFreeExceeded)
+    // ) {
+    //   await db.file.update({
+    //     data: {
+    //       uploadStatus: 'FAILED',
+    //     },
+    //     where: {
+    //       id: createdFile.id,
+    //     },
+    //   })
+    // }
 
     // vectorize and index entire document
     const pinecone = await getPineconeClient()
@@ -129,13 +129,21 @@ const onUploadComplete = async ({
   }
 }
 
+// export const ourFileRouter = {
+//   freePlanUploader: f({ pdf: { maxFileSize: '16MB' } })
+//     .middleware(middleware)
+//     .onUploadComplete(onUploadComplete),
+//   proPlanUploader: f({ pdf: { maxFileSize: '16MB' } })
+//     .middleware(middleware)
+//     .onUploadComplete(onUploadComplete),
+// } satisfies FileRouter
+
+
 export const ourFileRouter = {
-  freePlanUploader: f({ pdf: { maxFileSize: '4MB' } })
+  pdfUploader: f({ pdf: { maxFileSize: '16MB' } })
     .middleware(middleware)
     .onUploadComplete(onUploadComplete),
-  proPlanUploader: f({ pdf: { maxFileSize: '16MB' } })
-    .middleware(middleware)
-    .onUploadComplete(onUploadComplete),
-} satisfies FileRouter
+  } satisfies FileRouter
+
 
 export type OurFileRouter = typeof ourFileRouter
