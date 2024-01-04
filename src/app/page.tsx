@@ -23,7 +23,7 @@ export default function Home() {
           <span className='text-blue-600'>Media</span>{' '}
           in seconds.
         </h1>
-        <p className='mt-5 max-w-prose text-zinc-700 sm:text-lg'>
+        <p className='mt-5 mb-5 max-w-prose text-zinc-700 sm:text-lg'>
           Chat with Media allows you to have conversations with any
           Media. Simply upload your file and start
           asking questions right away.
@@ -32,6 +32,7 @@ export default function Home() {
         <RegisterLink
                   className={buttonVariants({
                     size: 'sm',
+                    
                   })}>
                   Get started{' '}
                   <ArrowRight className='ml-1.5 h-5 w-5' />
