@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/footer'
 import Providers from '@/components/Providers'
 import { cn, constructMetadata } from '@/lib/utils'
 import { Inter } from 'next/font/google'
@@ -46,6 +47,7 @@ export default function RootLayout({
           <Toaster />
           <Navbar />
           {children}
+          <Footer />
         </body>
       </Providers>
     </html>
