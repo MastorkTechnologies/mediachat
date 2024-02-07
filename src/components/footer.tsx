@@ -18,6 +18,9 @@ const Footer = () => {
             <p className='text-gray-500'>
               1st Floor, Keshav Tower, Village Razapur, Sector-9, Rohini, Delhi, 110085
             </p>
+            <p className='text-gray-500'>
+              GST: 07AAQCM4052K1Z3
+            </p>
           </div>
           <div className='hidden sm:flex flex-col items-start space-y-2'>
             <Link
