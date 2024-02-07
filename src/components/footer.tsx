@@ -13,8 +13,11 @@ const Footer = () => {
               <span>Chat With Media.</span>
             </Link>
             <p className='text-gray-500'>&copy; 2024  <Link href='https://mastork.com' className='font-semibold mb-2'>
-              <span>Mastork.</span>
+              <span>Mastork Technologies Pvt. Ltd.</span>
             </Link> All rights reserved.</p>
+            <p className='text-gray-500'>
+              1st Floor, Keshav Tower, Village Razapur, Sector-9, Rohini, LANDMARK NA, New Delhi, North West Delhi, Delhi, 110085
+            </p>
           </div>
           <div className='hidden sm:flex flex-col items-start space-y-2'>
             <Link
