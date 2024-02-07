@@ -16,7 +16,7 @@ const Footer = () => {
               <span>Mastork Technologies Pvt. Ltd.</span>
             </Link> All rights reserved.</p>
             <p className='text-gray-500'>
-              1st Floor, Keshav Tower, Village Razapur, Sector-9, Rohini, LANDMARK NA, New Delhi, North West Delhi, Delhi, 110085
+              1st Floor, Keshav Tower, Village Razapur, Sector-9, Rohini, Delhi, 110085
             </p>
           </div>
           <div className='hidden sm:flex flex-col items-start space-y-2'>
